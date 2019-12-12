@@ -63,6 +63,7 @@ var PhotoSwipeUI_Default =
 			captionEl: true,
 			fullscreenEl: true,
 			zoomEl: true,
+			downloadEl: true,
 			shareEl: true,
 			counterEl: true,
 			arrowEl: true,
@@ -431,6 +432,13 @@ var PhotoSwipeUI_Default =
 			onTap: function() {
 				_toggleShareModal();
 			} 
+		},
+		{
+			name: 'button--download',
+			option: 'downloadEl',
+			onTap: function() {
+				pswp.shout('downloadClick', pswp.currItem.src);
+			}
 		},
 		{ 
 			name: 'button--share', 
