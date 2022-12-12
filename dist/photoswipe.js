@@ -2564,7 +2564,9 @@ var _showOrHideTimeout,
 			_shout('initialZoom' + (out ? 'Out' : 'In') );
 
 			_currZoomLevel = item.initialZoomLevel;
-			_equalizePoints(_panOffset,  item.initialPosition );
+			if(item.initialPosition) {
+				_equalizePoints(_panOffset,  item.initialPosition );
+			}
 			_applyCurrentZoomPan();
 
 			template.style.opacity = out ? 0 : 1;
